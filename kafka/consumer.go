@@ -28,3 +28,45 @@ func (c *Consumer) ReadMessage(timeout time.Duration) (*Message, error) {
 func (c *Consumer) Close() (err error) {
 	return errors.New("")
 }
+
+func (c *Consumer) Assign(partitions []TopicPartition) (err error) {
+	return nil
+}
+
+// Assignment returns the current partition assignments
+func (c *Consumer) Assignment() (partitions []TopicPartition, err error) {
+	return nil, nil
+}
+
+// CommitOffsets commits the provided list of offsets
+// This is a blocking call.
+// Returns the committed offsets on success.
+func (c *Consumer) CommitOffsets(offsets []TopicPartition) ([]TopicPartition, error) {
+	return nil, nil
+}
+
+func (c *Consumer) Pause(partitions []TopicPartition) (err error) {
+	return nil
+}
+
+func (c *Consumer) Poll(timeoutMs int) (event Event) {
+	return nil
+}
+
+// Resume consumption for the provided list of partitions
+func (c *Consumer) Resume(partitions []TopicPartition) (err error) {
+	return nil
+}
+
+func (c *Consumer) StoreOffsets(offsets []TopicPartition) (storedOffsets []TopicPartition, err error) {
+	return nil, nil
+}
+
+func (c *Consumer) Unassign() (err error) {
+	return nil
+}
+
+// Logs returns the log channel if enabled, or nil otherwise.
+func (c *Consumer) Logs() chan LogEvent {
+	return nil
+}

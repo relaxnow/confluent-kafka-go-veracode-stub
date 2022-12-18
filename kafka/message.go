@@ -8,6 +8,8 @@ import (
 type Message struct {
 	TopicPartition TopicPartition
 	Value          []byte
+	Key            []byte
+	Headers        []Header
 }
 
 // String returns a human readable representation of a Message.
