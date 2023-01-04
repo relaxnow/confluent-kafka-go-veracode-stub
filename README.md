@@ -1,6 +1,8 @@
-# veracode-go-stub-confluent-kafka
+# Veracode Static Analysis Go Stub: Confluent Kafka
 
-You can use this stub in place of the [Confluent's Golang Client for Apache KafkaTM](https://github.com/confluentinc/confluent-kafka-go) by using a replace when building your package for Veracode Static Analysis, for example like so in a file called `veracode.go.mod`:
+Veracode Static Analysis does not currently support CGo. [Confluent's Golang Client for Apache KafkaTM](https://github.com/confluentinc/confluent-kafka-go) uses CGo. This means that if your application directly uses this library it will be unable to analyze the application.
+
+As a workaround you can use this stub in place of the library by using a replace when building your package for Veracode Static Analysis, for example like so in a file called `veracode.go.mod`:
 
 ```
 
