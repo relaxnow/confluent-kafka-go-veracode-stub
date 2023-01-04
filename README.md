@@ -11,6 +11,7 @@ replace github.com/confluentinc/confluent-kafka-go => ../confluent-kafka-go-vera
 This can then be used in a file called `veracode.sh` like so:
 
 ```bash
+#!/bin/sh
 # Create /tmp/myapp
 mkdir /tmp/myapp
 # Copy everything from the current directory into /tmp/myapp
