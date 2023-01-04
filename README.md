@@ -32,5 +32,6 @@ rm -rf /tmp/myapp
 rm -rf /tmp/confluent-kafka-go-veracode-stub
 ```
 
-This results in `/tmp/myapp.zip` being created and packaged appropriately.
+This results in `/tmp/myapp.zip` being created and packaged appropriately. You can them upload this file to Veracode Satic Analysis.
+
 Please note this only deals with the CGo replace, you may still need other things like for example a `veracode.json` for this please see: https://docs.veracode.com/r/compilation_go
