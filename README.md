@@ -40,3 +40,5 @@ This results in `/tmp/myapp.zip` being created and packaged appropriately. You c
 Please note this only deals with the CGo replace, you may still need other things like for example a `veracode.json` for this please see: 
 
 [Go Application Packaging in the Veracode Documentation](https://docs.veracode.com/r/compilation_go)
+
+For an example on how to use this please see: https://github.com/relaxnow/veracode-static-example-go-kafka-stub
