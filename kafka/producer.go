@@ -18,7 +18,7 @@ func (p *Producer) Produce(msg *Message, deliveryChan chan Event) error {
 	return errors.New("Not implemented")
 }
 
-func (p *Producer) Flush(timeout int) {}
+func (p *Producer) Flush(timeout int) int { return 0 }
 
 // Events returns the Events channel (read)
 func (p *Producer) Events() chan Event {
