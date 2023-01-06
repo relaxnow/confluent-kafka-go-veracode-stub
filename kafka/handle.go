@@ -56,20 +56,12 @@ type Handle interface {
 
 // Common instance handle for both Producer and Consumer
 type handle struct {
-	rk  *C.rd_kafka_t
-	rkq *C.rd_kafka_queue_t
-
 	// Forward logs from librdkafka log queue to logs channel.
 	logs          chan LogEvent
-	logq          *C.rd_kafka_queue_t
 	closeLogsChan bool
 
 	// Topic <-> rkt caches
 	rktCacheLock sync.Mutex
-	// topic name -> rkt cache
-	rktCache map[string]*C.rd_kafka_topic_t
-	// rkt -> topic name cache
-	rktNameCache map[*C.rd_kafka_topic_t]string
 
 	// Cached instance name to avoid CGo call in String()
 	name string
