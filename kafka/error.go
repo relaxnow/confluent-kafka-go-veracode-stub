@@ -1,6 +1,9 @@
 package kafka
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // Error provides a Kafka-specific error container
 type Error struct {
@@ -39,4 +42,9 @@ func (e Error) IsFatal() bool {
 // Same as Error.String()
 func (e Error) Error() string {
 	return e.String()
+}
+
+// getFatalError returns an Error object if the client instance has raised a fatal error, else nil.
+func getFatalError(H Handle) error {
+	return errors.New("Not implemented")
 }
