@@ -6,9 +6,20 @@ import "errors"
 type Producer struct {
 	events         chan Event
 	produceChannel chan *Message
+	handle         handle
 
 	// Terminates the poller() goroutine
 	pollerTermChan chan bool
+}
+
+// String returns a human readable name for a Producer instance
+func (p *Producer) String() string {
+	return p.handle.String()
+}
+
+// get_handle implements the Handle interface
+func (p *Producer) gethandle() *handle {
+	return &p.handle
 }
 
 func NewProducer(conf *ConfigMap) (*Producer, error) {
@@ -38,4 +49,12 @@ func (p *Producer) Flush(timeout int) int { return 0 }
 // Events returns the Events channel (read)
 func (p *Producer) Events() chan Event {
 	return p.events
+}
+
+func (p *Producer) SetOAuthBearerToken(oauthBearerToken OAuthBearerToken) error {
+	return p.handle.setOAuthBearerToken(oauthBearerToken)
+}
+
+func (p *Producer) SetOAuthBearerTokenFailure(errstr string) error {
+	return p.handle.setOAuthBearerTokenFailure(errstr)
 }
