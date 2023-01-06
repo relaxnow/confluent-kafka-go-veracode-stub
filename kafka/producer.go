@@ -11,8 +11,9 @@ type Producer struct {
 	pollerTermChan chan bool
 }
 
-func NewProducer(c *ConfigMap) (Producer, error) {
-	return Producer{}, nil
+func NewProducer(conf *ConfigMap) (*Producer, error) {
+	p := Producer{}
+	return &p, nil
 }
 
 // GetFatalError returns an Error object if the client instance has raised a fatal error, else nil.
@@ -29,7 +30,7 @@ func (p *Producer) Close() {
 }
 
 func (p *Producer) Produce(msg *Message, deliveryChan chan Event) error {
-	return errors.New("Not implemented")
+	return errors.New("not implemented")
 }
 
 func (p *Producer) Flush(timeout int) int { return 0 }
