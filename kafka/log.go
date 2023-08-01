@@ -1,6 +1,8 @@
 package kafka
 
-import "time"
+import (
+	"time"
+)
 
 // LogEvent represent the log from librdkafka internal log queue
 type LogEvent struct {
@@ -9,4 +11,8 @@ type LogEvent struct {
 	Message   string    // Log message
 	Level     int       // Log syslog level, lower is more critical.
 	Timestamp time.Time // Log timestamp
+}
+
+func (logEvent LogEvent) String() string {
+	return ""
 }

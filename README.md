@@ -1,8 +1,11 @@
-# Veracode Static (Analysis) Go Stub: Confluent Kafka
+# Veracode Static (Analysis) Go Stub: Confluent Kafka (v1.4.2)
 
-Veracode Static Analysis does not currently support CGo. [Confluent's Golang Client for Apache KafkaTM](https://github.com/confluentinc/confluent-kafka-go) uses CGo. This means that if your application directly uses this library it will be unable to analyze the application.
+Veracode Static Analysis does not currently support
+CGo. [Confluent's Golang Client for Apache KafkaTM](https://github.com/confluentinc/confluent-kafka-go) uses CGo. This
+means that if your application directly uses this library it will be unable to analyze the application.
 
-As a workaround you can use this stub in place of the library by using a replace when building your package for Veracode Static Analysis, for example like so in a file called `veracode.go.mod`:
+As a workaround you can use this stub in place of the library by using a replace when building your package for Veracode
+Static Analysis, for example like so in a file called `veracode.go.mod`:
 
 ```
 
@@ -35,9 +38,11 @@ rm -rf /tmp/myapp
 rm -rf /tmp/veracode-static-go-stub-confluent-kafka
 ```
 
-This results in `/tmp/myapp.zip` being created and packaged appropriately. You can them upload this file to Veracode Satic Analysis.
+This results in `/tmp/myapp.zip` being created and packaged appropriately. You can them upload this file to Veracode
+Satic Analysis.
 
-Please note this only deals with the CGo replace, you may still need other things like for example a `veracode.json` for this please see: 
+Please note this only deals with the CGo replace, you may still need other things like for example a `veracode.json` for
+this please see:
 
 [Go Application Packaging in the Veracode Documentation](https://docs.veracode.com/r/compilation_go)
 
