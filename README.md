@@ -23,7 +23,7 @@ mkdir /tmp/myapp
 cp -Rf * /tmp/myapp
 # Set up stub in /tmp
 cd /tmp
-git clone git@github.com:relaxnow/veracode-static-go-stub-confluent-kafka.git
+git clone -b v1.4.2 git@github.com:relaxnow/veracode-static-go-stub-confluent-kafka.git
 # Go to myapp and add the replace to the go.mod
 cd /tmp/myapp
 cat veracode.go.mod >> /tmp/myapp/go.mod
