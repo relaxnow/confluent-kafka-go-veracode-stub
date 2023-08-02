@@ -46,4 +46,4 @@ this please see:
 
 [Go Application Packaging in the Veracode Documentation](https://docs.veracode.com/r/compilation_go)
 
-For an example on how to use this please see: https://github.com/relaxnow/veracode-static-example-go-kafka-stub
+For an example on how to use this please see: https://github.com/relaxnow/veracode-static-example-go-kafka-stub/tree/v1.4.2
